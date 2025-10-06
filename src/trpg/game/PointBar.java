@@ -76,4 +76,14 @@ public class PointBar {
     public boolean isEmpty() {
         return (this.value == 0);
     }
+
+    @Override
+    public String toString() {
+        StringBuilder str = new StringBuilder("[")
+            .append(this.value)
+            .append(" / ")
+            .append(this.maxValue)
+            .append(']');
+        return str.toString();
+    }
 }

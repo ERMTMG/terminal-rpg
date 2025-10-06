@@ -75,4 +75,15 @@ public class StatBlock {
             this.resistance + rhs.resistance
         );
     }
+
+    @Override 
+    public String toString() {
+        StringBuilder str = new StringBuilder()
+            .append("[STR: ").append(this.strength).append(", ")
+            .append("INT: ").append(this.intelligence).append(", ")
+            .append("AGI: ").append(this.agility).append(", ")
+            .append("LUC: ").append(this.luck).append(", ")
+            .append("RES: ").append(this.resistance).append("]");
+        return str.toString();
+    }
 }
