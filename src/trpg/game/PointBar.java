@@ -49,8 +49,9 @@ public class PointBar {
         if(increment < 0) {
             return -1;
         } else if(this.value + increment > this.maxValue) {
+            int diff = (this.value + increment) - this.maxValue;
             this.value = this.maxValue;
-            return this.maxValue - (this.value + increment);
+            return diff;
         } else {
             this.value += increment;
             return 0;
@@ -61,8 +62,9 @@ public class PointBar {
         if(decrement < 0) {
             return -1;
         } else if(this.value - decrement < 0) {
+            int diff = decrement - this.value;
             this.value = 0;
-            return decrement - this.value;
+            return diff;
         } else {
             this.value -= decrement;
             return 0;
